@@ -13,7 +13,7 @@
 		<appender-ref ref="STDOUT" />
 	</logger>
 	
-	<logger name="assig.apurba.abac" level="debug" additivity="false">
+	<logger name="assig.apurba.rar" level="debug" additivity="false">
 		<appender-ref ref="STDOUT" />
 	</logger>
 

@@ -1,10 +1,27 @@
+/* SECURITY ACCESS CONTEXT.java
+ *   by Anonymous
+ *
+ * Created:
+ *   7/5/2020, 2:23:36 PM
+ * Last edited:
+ *   7/5/2020, 2:23:36 PM
+ * Auto updated?
+ *   Yes
+ *
+ * Description:
+ *   Apurba Mondal
+**/
+
 package assig.apurba.rar.security.policy;
+
+import java.util.List;
 
 public class SecurityAccessContext {
 	private Object subject;
 	private Object resource;
 	private Object action;
 	private Object environment;
+	// private Object userRoles;
 	
 	public SecurityAccessContext(Object subject, Object resource, Object action, Object environment) {
 		super();
@@ -12,6 +29,7 @@ public class SecurityAccessContext {
 		this.resource = resource;
 		this.action = action;
 		this.environment = environment;
+		// this.userRoles=userRoles;
 	}
 	public Object getSubject() {
 		return subject;
@@ -19,6 +37,13 @@ public class SecurityAccessContext {
 	public void setSubject(Object subject) {
 		this.subject = subject;
 	}
+
+	// public Object  getUserRoles() {
+	// 	return userRoles;
+	// }
+	// public void setUserRoles(Object userRoles) {
+	// 	this.userRoles = userRoles;
+	// }
 	public Object getResource() {
 		return resource;
 	}
@@ -46,6 +71,8 @@ public class SecurityAccessContext {
 		result = prime * result + ((environment == null) ? 0 : environment.hashCode());
 		result = prime * result + ((resource == null) ? 0 : resource.hashCode());
 		result = prime * result + ((subject == null) ? 0 : subject.hashCode());
+		// result = prime * result + ((userRoles == null) ? 0 : userRoles.hashCode());
+
 		return result;
 	}
 	
@@ -68,6 +95,11 @@ public class SecurityAccessContext {
 				return false;
 		} else if (!environment.equals(other.environment))
 			return false;
+		// if (userRoles == null) {
+		// 	if (other.userRoles != null)
+		// 		return false;
+		// } else if (!userRoles.equals(other.userRoles))
+		// 	return false;
 		if (resource == null) {
 			if (other.resource != null)
 				return false;

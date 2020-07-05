@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "35c9d545-d836-4951-a554-8e2581c2935e",
+		"name": "locus",
+		"schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+	},
+	"item": [
+		{
+			"name": "User-list",
+			"_postman_id": "e7c5e015-60e4-4b39-b778-a5e326f18fc9",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"url": "http:\/\/localhost:8080\/users\/list\/"
+			},
+			"response": []
+		},
+		{
+			"name": "User - Delete",
+			"_postman_id": "198e8876-ab89-4b10-9145-24bacb028a69",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"url": "http:\/\/localhost:8080\/users\/1"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - Add",
+			"_postman_id": "a0874ae1-b7f7-4ccb-96bc-7821b1e1f3a9",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ="
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Firsttasks\",\r\n    \"description\": \"The first tasks\"\r\n}\r\n"
+				},
+				"url": "http:\/\/localhost:8080\/task\/"
+			},
+			"response": []
+		},
+		{
+			"name": "Task - list",
+			"_postman_id": "d1eb1782-a30e-479f-9e35-2d4d666ca91d",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http:\/\/localhost:8080\/task\/"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - Assign PM",
+			"_postman_id": "de67e07c-f2d5-4fea-b4ce-dc359150c003",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ="
+					},
+					{
+						"key": "Content-Type",
+						"value": "text\/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "pm1"
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/pm\/"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - Assign Developer",
+			"_postman_id": "fec3d3d3-65e1-4abc-bb0c-c3e3707101f3",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"dev2\",\r\n\t\"roles\": [\"DEVELOPER\"]\r\n}"
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/users\/"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - Assign Tester",
+			"_postman_id": "9ac58d6f-30fd-4bc9-a78c-6771c2f5f8cd",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"test1\",\r\n\t\"roles\": [\"TESTER\"]\r\n}"
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/users\/"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - List Users",
+			"_postman_id": "a4fcb5cb-65c9-48f9-acdb-992130980db3",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					}
+				],
+				"url": "http:\/\/localhost:8080\/task\/1\/users\/"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - Delete User",
+			"_postman_id": "2f6d4c70-4375-4772-98b2-1ff2a6a2539f",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/users\/dev1"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - View",
+			"_postman_id": "4020f41d-07ce-4c03-ae80-4c6a911ac929",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"url": "http:\/\/localhost:8080\/task\/1\/"
+			},
+			"response": []
+		},
+		{
+			"name": "tasks - Delete",
+			"_postman_id": "437a3c87-34d0-4a31-a861-45a1bb2bb940",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/"
+			},
+			"response": []
+		},
+		{
+			"name": "resource - List ",
+			"_postman_id": "c9ef19cc-d96b-4701-99c5-acb0b005c7f6",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					}
+				],
+				"url": "http:\/\/localhost:8080\/task\/1\/resources\/"
+			},
+			"response": []
+		},
+		{
+			"name": "resource - Create",
+			"_postman_id": "3c87a971-4bb8-4e87-b1c3-2ce48c699a60",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"type\": \"LAPTOP\",\r\n\t\"name\": \"task1\",\r\n\t\"description\": \"First task\"\r\n}"
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/resources\/"
+			},
+			"response": []
+		},
+		{
+			"name": "resource - Update",
+			"_postman_id": "71ea40e5-6119-4008-b753-1d1a37db7e72",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application\/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"type\": \"CAR\",\r\n\t\"name\": \"New Fast Car\",\r\n\t\"description\": \"GTR\"\r\n}"
+				},
+				"url": "http:\/\/localhost:8080\/task\/2\/resources\/1\/"
+			},
+			"response": []
+		},
+		{
+			"name": "resource - Delete",
+			"_postman_id": "ba67308d-edbb-499a-a4a8-3192c246d904",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "pm2",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http:\/\/localhost:8080\/task\/2\/resource\/2\/"
+			},
+			"response": []
+		},
+		{
+			"name": "resource - Assign",
+			"_postman_id": "cecb0a96-54cf-4525-bf70-e1c737a8fd51",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text\/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "dev1"
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/resources\/1\/assignee"
+			},
+			"response": []
+		},
+		{
+			"name": "resource - Change Status",
+			"_postman_id": "d53c5f08-5e1e-437f-9f3b-75e41a452e60",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "admin",
+						"password": "password",
+						"showPassword": false
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic cG0xOnBhc3N3b3Jk"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text\/plain"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "COMPLETED"
+				},
+				"url": "http:\/\/localhost:8080\/task\/1\/resources\/1\/status"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

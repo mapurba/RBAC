@@ -1,3 +1,17 @@
+/* HTTP AUTHENTICATION ENTRY POINT.java
+ *   by Anonymous
+ *
+ * Created:
+ *   7/5/2020, 2:22:48 PM
+ * Last edited:
+ *   7/5/2020, 2:22:48 PM
+ * Auto updated?
+ *   Yes
+ *
+ * Description:
+ *   Apurba Mondal
+**/
+
 package assig.apurba.rar.config;
 
 import java.io.IOException;

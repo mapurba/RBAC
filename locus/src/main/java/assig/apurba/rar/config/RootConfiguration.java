@@ -1,3 +1,17 @@
+/* ROOT CONFIGURATION.java
+ *   by Anonymous
+ *
+ * Created:
+ *   7/5/2020, 2:22:29 PM
+ * Last edited:
+ *   7/5/2020, 2:22:29 PM
+ * Auto updated?
+ *   Yes
+ *
+ * Description:
+ *   Apurba Mondal
+**/
+
 package assig.apurba.rar.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +23,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import assig.apurba.rar.web.services.impl.InMemoryUserDetailsService;
 
 @Configuration
 @ComponentScan("assig.apurba.rar")

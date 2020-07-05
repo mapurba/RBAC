@@ -4,11 +4,11 @@ services:
         container_name: tomcat
         image: tomcat
         volumes:
-             - ./Users/apurbamondal/Downloads/abacSpringSecurity-master/sample-issue-tracker/target/sample-issue-tracker.war:/usr/local/tomcat/webapps/ROOT.war
+             - ./Users/apurbamondal/Downloads/abacSpringSecurity-master/sample-Resource-tracker/target/sample-Resource-tracker.war:/usr/local/tomcat/webapps/ROOT.war
         ports:
             - "8180:8080"
         
             docker run -it \
      -p 8080:8080 \
-     -v /Users/apurbamondal/Downloads/abacSpringSecurity-master/locus/target/sample-issue-tracker.war:/usr/local/tomcat/webapps/ROOT.war \
+     -v /Users/apurbamondal/Downloads/abacSpringSecurity-master/locus/target/sample-Resource-tracker.war:/usr/local/tomcat/webapps/ROOT.war \
      tomcat
