@@ -122,7 +122,7 @@ All users can be found and modified in **assig.apurba.rar.config.InMemoryUserDet
 ```
 Postman api test collection . feel free to link my github
 ```
-Postman collection : https://www.getpostman.com/collections/536a9d0900e9af3239d4
+Postman collection : https://www.getpostman.com/collections/93da10f4868b1544dc01
 
 # User List apis 
 
